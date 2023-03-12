@@ -1,0 +1,43 @@
+<resources>
+<!--registerActivity-->
+    <string name="name">Imię</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="re_enter_password">Powtórz hasło</string>
+    <string name="register">Zarejestruj</string>
+    <string name="register_question">Jesteś już zarejestrowany?\nLogin.</string>
+<!--MainActivity-->
+    <string name="login">Login</string>
+    <string name="login_question">Nie masz konta?\nZarejestuj się tu.</string>
+<!--MainPageActivity-->
+    <string name="add_region">Dodaj Pole</string>
+    <string name="show_regions">Pokaż Pola</string>
+<!--activity_dodaj_pole-->
+    <string name="save_region">Zapisz</string>
+    <string name="reset_region">Wyczyść</string>
+    <string name="define_region">Zdefiniuj pole poprzez kliknięcie na mapie</string>
+<!--activity_szczegoly_pola-->
+    <string name="statistics">Statystyka</string>
+    <string name="Data">Dane</string>
+    <string name="Chart">Wykres</string>
+<!--activity_dane-->
+    <string name="soil_moisure">Wilgotność</string>
+    <string name="temperature">Temperatura</string>
+    <string name="light">Światło</string>
+    <string name="enter_data">Wprowadź date</string>
+    <string name="from">Od</string>
+    <string name="to">Do</string>
+    <string name="pattern_data">2022-00-00 12:00:00</string>
+    <string name="serach">Szukaj</string>
+    <string name="average_soil_moisure">Średnia wilgotność za ten okres czasu wynosi:</string>
+    <string name="date">Data</string>
+    <string name="sensor_name">Nazwa Sensora</string>
+<!--activity_wykres-->
+    <string name="months">Miesiące</string>
+    <string name="weeks">Tygodnie</string>
+    <string name="days">Dni</string>
+    <string name="minutes">Data</string>
+
+
+
+</resources>

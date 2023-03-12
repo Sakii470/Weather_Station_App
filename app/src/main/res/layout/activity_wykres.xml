@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.WykresActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <CheckBox
+            android:id="@+id/checkBoxWilgotnosc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/soil_moisure"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxTemperatura"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:checked="false"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxSwiatlo"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light"
+            android:checked="false"/>
+
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/linechart"
+        android:layout_width="359dp"
+        android:layout_height="539dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tvDane"
+            android:layout_width="160dp"
+            android:layout_height="54dp"
+            android:gravity="center_horizontal"
+
+            android:text=""
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </com.github.mikephil.charting.charts.LineChart>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        >
+
+        <Button
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/custom_button"
+            android:onClick="btnMiesiace"
+            android:text="@string/months"
+            android:textColor="@android:color/white"></Button>
+
+        <Button
+            android:layout_width="112dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/custom_button"
+            android:onClick="btnTygodnie"
+            android:text="@string/weeks"
+            android:textColor="@android:color/white"></Button>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/custom_button"
+            android:onClick="btnDni"
+            android:text="@string/days"
+            android:textColor="@android:color/white"></Button>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/custom_button"
+            android:onClick="btnMinuty"
+            android:text="@string/minutes"
+            android:textColor="@android:color/white"></Button>
+
+
+
+    </LinearLayout>
+</LinearLayout>
