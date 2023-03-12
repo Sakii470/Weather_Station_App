@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,17 +32,19 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvStatusLogin;
     public static String userId;
     private String URL = "http://sensor332.atwebpages.com/register_login/login.php";
-
+LottieAnimationView laView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("MainActivity");
         setContentView(R.layout.activity_main);
-
         findBy();
+
+
     }
 
     public void findBy() {
+
         email = password = "";
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
