@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activities.MainPageActivity"
-    android:gravity="center"
+
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#e8f4f8">
 
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/welcomeAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/welcome_animation"
 
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/earth_ani"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/welcomeAnimation"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/earth_ani"
+
+        />
 
     <Button
         android:id="@+id/btnDodajPole"
-
+        android:layout_below="@id/earth_ani"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_region"
@@ -24,6 +46,7 @@
 
     <Button
         android:id="@+id/btnPokazPola"
+        android:layout_below="@+id/btnDodajPole"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,4 +57,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>
