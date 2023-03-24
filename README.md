@@ -6,4 +6,5 @@ This mobile application enables servicing distributed system for measurement env
 
 ## Block diagram
 
+![Structure project](https://user-images.githubusercontent.com/70532979/227450117-b2d947b0-8ba6-4156-8011-e4fc40d6a6b5.png)
 
