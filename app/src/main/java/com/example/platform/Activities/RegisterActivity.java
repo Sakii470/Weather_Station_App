@@ -23,8 +23,11 @@ import com.example.platform.R;
 import java.util.HashMap;
 import java.util.Map;
 
+// Activitie enables user registration
+
 public class RegisterActivity extends AppCompatActivity {
 
+//variable declaration and initialization
     private EditText etName, etEmail, etPassword, etReenterPassword;
     private TextView tvStatus;
     private Button btnRegister;
@@ -38,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         findBy();
     }
-
+// Method initialize variable.Views are find by Id (XML).
     private void findBy() {
         etName = findViewById(R.id.etName);
         etEmail = findViewById(R.id.etEmail);
@@ -48,12 +51,13 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         name = email = password = reenterPassword = "";
     }
-
+// Method is activated if user click on button "rejestracja". Method sent entered data(email,name,password) to server, server application save new user in own database.
     public void rejestracja(View view) {
         name = etName.getText().toString().trim();
         email = etEmail.getText().toString().trim();
         password = etPassword.getText().toString().trim();
         reenterPassword = etReenterPassword.getText().toString().trim();
+// If entered data will be correct, server application response "seccess" and user will be sing in to system.
         if (!password.equals(reenterPassword)) {
             Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show();
         } else if (!name.equals("") && !email.equals("") && !password.equals("")) {
@@ -69,11 +73,13 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
             }, new Response.ErrorListener() {
+// If will be problem with connection to server user will see information about this.
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
                 }
             }) {
+//Data sent to server application
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
@@ -87,7 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
             requestQueue.add(stringRequest);
         }
     }
-
+// Method is activated if user click on button "login". Afterwards user will see MainActivity
     public void login(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

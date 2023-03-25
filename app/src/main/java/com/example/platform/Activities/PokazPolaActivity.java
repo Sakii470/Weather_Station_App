@@ -31,8 +31,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+//Activitie show definied by the user list areas.
+
 public class PokazPolaActivity extends AppCompatActivity {
 
+    //variable declaration and initialization
     ListView listView;
     RegionAdapter adapter;
     public static ArrayList<RegionModel> regionArrayList = new ArrayList<>();
@@ -48,17 +51,20 @@ public class PokazPolaActivity extends AppCompatActivity {
         setTitle("PokazPolaActivity");
         setContentView(R.layout.activity_pokaz_pola);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+// Initialize variable.Views are find by Id (XML).
         listView = findViewById(R.id.myListView);
+//Created an adapter to convert the array to views
         adapter = new RegionAdapter(this, regionArrayList);
+//Attach the adapter to a ListView
         listView.setAdapter(adapter);
 
         listViewListener();
         retriveRegion();
 
     }
-
+// method describe what activity doing after click on listView row.
     private void listViewListener() {
+// implementation listener on listView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
@@ -66,15 +72,18 @@ public class PokazPolaActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 CharSequence[] dialogItem = {"Pokaż Szczegóły Pola", "Usuń Pole"};
                 regionId = regionArrayList.get(position).getRegionId();
+// Define what activity doing after to item click.
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
                         switch (i) {
                             case 0:
+        //PokażPolaActivity create intent to SzczegolyPolaActivity.
                                 startActivity(new Intent(getApplicationContext(), SzczegolyPolaActivity.class)
                                         .putExtra("position", position));
                                 break;
                             case 1:
+        //Method call - method describe delete check region from the database.
                                 deleteRegion(regionArrayList.get(position).getRegionId());
                                 finish();
                                 startActivity(getIntent());
@@ -86,7 +95,7 @@ public class PokazPolaActivity extends AppCompatActivity {
             }
         });
     }
-
+//method describe delete check region from the database.
     private void deleteRegion(final String id) {
         StringRequest request = new StringRequest(Request.Method.POST, URL1,
                 new Response.Listener<String>() {

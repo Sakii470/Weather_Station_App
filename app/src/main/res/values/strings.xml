@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name"> Weather Station</string>
 <!--registerActivity-->
     <string name="name">Imię</string>
     <string name="email">Email</string>

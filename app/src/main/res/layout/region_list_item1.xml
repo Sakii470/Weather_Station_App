@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:orientation="vertical"
-            android:background="@drawable/gradient_3"
+            android:background="@drawable/gradient_4"
             android:id="@+id/ll_bg"
             >
 

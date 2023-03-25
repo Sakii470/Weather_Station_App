@@ -59,6 +59,7 @@ public class DaneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("DaneActivity");
         setContentView(R.layout.activity_dane);
+// Button back on actionBar
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

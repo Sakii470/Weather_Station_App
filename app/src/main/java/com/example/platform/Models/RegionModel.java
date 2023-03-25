@@ -3,13 +3,9 @@ package com.example.platform.Models;
 public class RegionModel {
     private String regionId;
 
-
-    public RegionModel() {
-    }
-
+//Constructor RegionModel
     public RegionModel(String regionId) {
         this.regionId = regionId;
-
     }
 
     //----------------------------------------------------------------------
@@ -17,9 +13,6 @@ public class RegionModel {
         return regionId;
     }
 
-    public void setRegionId(String id) {
-        this.regionId = regionId;
-    }
 //------------------------------------------------------------------------------------------
 
 
