@@ -17,8 +17,8 @@ This mobile application enables the monitoring of a distributed system that meas
 ![schemat - baza danych ](https://user-images.githubusercontent.com/70532979/227714144-cc9808d6-54c3-42f6-a6d8-72f22fcc7564.png)
 
 Table <b>users</b> - Storing data about registrated users. <br>
-Table <b>sensors</b> Storing data about measured environmental factors, measurement location and date.<br>
-Table <b>pins</b> Storing data about pins that define regions. <br>
-Table <b>regions</b> Storing data about regions and their owners. <br>
+Table <b>sensors</b> - Storing data about measured environmental factors, measurement location and date.<br>
+Table <b>pins</b> - Storing data about pins that define regions. <br>
+Table <b>regions</b> - Storing data about regions and their owners. <br>
 
 
