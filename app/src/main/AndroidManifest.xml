@@ -54,7 +54,7 @@
             android:exported="false"
              />
         <activity
-            android:name=".Activities.PokazPolaActivity"
+            android:name=".Activities.MainPageActivity$PokazPolaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

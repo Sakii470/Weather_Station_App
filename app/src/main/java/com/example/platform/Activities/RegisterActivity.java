@@ -3,6 +3,8 @@ package com.example.platform.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -53,6 +55,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 // Method is activated if user click on button "rejestracja". Method sent entered data(email,name,password) to server, server application save new user in own database.
     public void rejestracja(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         name = etName.getText().toString().trim();
         email = etEmail.getText().toString().trim();
         password = etPassword.getText().toString().trim();

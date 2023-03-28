@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -140,7 +142,7 @@ public class SzczegolyPolaActivity extends AppCompatActivity implements OnMapRea
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> data = new HashMap<>();
                 data.put("userId", MainActivity.userId.trim());
-                data.put("regionId", PokazPolaActivity.regionId.trim());
+                data.put("regionId", MainPageActivity.PokazPolaActivity.regionId.trim());
                 Log.d(TAG, "UserIdko " + MainActivity.userId);
                 return data;
             }
@@ -267,19 +269,23 @@ public class SzczegolyPolaActivity extends AppCompatActivity implements OnMapRea
     }
 
     public void btnDane(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         Intent intent = new Intent(SzczegolyPolaActivity.this, DaneActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void btnWykres(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         Intent intent = new Intent(SzczegolyPolaActivity.this, WykresActivity.class);
         startActivity(intent);
         finish();
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent myIntent = new Intent(getApplicationContext(), PokazPolaActivity.class);
+        Intent myIntent = new Intent(getApplicationContext(), MainPageActivity.PokazPolaActivity.class);
         startActivityForResult(myIntent, 0);
         return true;
     }

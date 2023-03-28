@@ -3,6 +3,9 @@ package com.example.platform.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 //variable declaration and initialization
     private EditText etEmail, etPassword;
     private String email, password;
+    private Button btnLogin;
     private TextView tvStatusLogin;
     public static String userId;
     private String URL = "http://sensor332.atwebpages.com/register_login/login.php";
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setTitle("MainActivity");
         setContentView(R.layout.activity_main);
         findBy();
@@ -46,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         tvStatusLogin = findViewById(R.id.tvStatusLogin);
+        btnLogin = findViewById(R.id.btnLogin);
     }
 // Method is activated if user click on btnLogin. Method sent entered data(email, password) to server, and give access to system if user data are correct.
     public void btnLogin(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         email = etEmail.getText().toString().trim();
         password = etPassword.getText().toString().trim();
         if (!email.equals("") && !password.equals("")) {
@@ -66,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, MainPageActivity.class);
                         startActivity(intent);
                         finish();
+                        btnLogin.animate().scaleYBy(1).setDuration(3000);
                     }
                 }
             }, new Response.ErrorListener() {

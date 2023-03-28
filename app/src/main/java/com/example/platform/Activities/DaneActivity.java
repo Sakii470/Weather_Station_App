@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -199,6 +201,8 @@ public class DaneActivity extends AppCompatActivity {
     }
 
     public void btnSzukaj(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         data_Od = etData_Od.getText().toString().trim();
         data_Do = etData_Do.getText().toString().trim();
         retriveSensorData();

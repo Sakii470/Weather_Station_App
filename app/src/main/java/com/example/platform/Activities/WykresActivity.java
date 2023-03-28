@@ -9,6 +9,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -292,18 +294,26 @@ public class WykresActivity extends AppCompatActivity {
     }
 
     public void btnMiesiace(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         StartRetriveData(URL);
     }
 
     public void btnTygodnie(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         StartRetriveData(URL1);
     }
 
     public void btnDni(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         StartRetriveData(URL2);
     }
 
     public void btnMinuty(View view) {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shake);
         StartRetriveData(URL3);
     }
 

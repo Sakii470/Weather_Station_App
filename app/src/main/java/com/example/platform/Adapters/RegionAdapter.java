@@ -24,7 +24,7 @@ public class RegionAdapter extends ArrayAdapter<RegionModel> {
 
 // Constructor RegionAdapter class
     public RegionAdapter(@NonNull Context context, List<RegionModel> arrayListRegion) {
-        super(context, R.layout.region_list_item1, arrayListRegion);
+        super(context, R.layout.region_list_item_regions, arrayListRegion);
         this.context = context;
         this.arrayListRegion = arrayListRegion;
     }
@@ -33,7 +33,7 @@ public class RegionAdapter extends ArrayAdapter<RegionModel> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 // Define rows on ListView
-        View view = LayoutInflater.from(parent.getContext()).inflate((R.layout.region_list_item1), null, true);
+        View view = LayoutInflater.from(parent.getContext()).inflate((R.layout.region_list_item_regions), null, true);
 // Initialize variable.Views are find by Id (XML).
         TextView tvID = view.findViewById(R.id.textView);
 // Increment possition variable.

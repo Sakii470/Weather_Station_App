@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -22,8 +24,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.platform.R;
-
-
 import com.example.platform.databinding.ActivityDodajPoleBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -86,7 +86,8 @@ public class DodajPoleActivity extends AppCompatActivity implements OnMapReadyCa
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Animation shake = AnimationUtils.loadAnimation(DodajPoleActivity.this, R.anim.shake);
+                view.startAnimation(shake);
                 if (polygon != null) {
                     polygon.remove();
                 }
@@ -98,7 +99,8 @@ public class DodajPoleActivity extends AppCompatActivity implements OnMapReadyCa
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Animation shake = AnimationUtils.loadAnimation(DodajPoleActivity.this, R.anim.shake);
+                view.startAnimation(shake);
                 StringRequest stringRequest1 = new StringRequest(Request.Method.POST, URL1, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

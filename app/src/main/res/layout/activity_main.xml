@@ -87,6 +87,7 @@
         android:onClick="btnLogin"
         android:textColor="@android:color/white"
         android:background="@drawable/custom_button"
+
         />
 
     <TextView
