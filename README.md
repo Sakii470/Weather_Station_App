@@ -9,8 +9,9 @@ This mobile application enables the monitoring of a distributed system that meas
 https://user-images.githubusercontent.com/70532979/230366676-58ff6915-b08c-4c65-91a0-2c3fb638867a.mp4
 
 ## System Block Diagram - Description
-
+<p align="center">
 ![Structure project](https://user-images.githubusercontent.com/70532979/227450117-b2d947b0-8ba6-4156-8011-e4fc40d6a6b5.png)
+</p>
 
 <b>Sensors</b> - Responsible for measuring environmental factors and sending them to a server. <br>
 <b>Server</b> - Resposible for storing data about users and measured environmental factors. <br>
