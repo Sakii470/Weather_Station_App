@@ -14,8 +14,8 @@ https://user-images.githubusercontent.com/70532979/230366676-58ff6915-b08c-4c65-
 
 
 <li><b>Sensors</b> - Responsible for measuring environmental factors and sending them to a server. <br> </li>
-<b>Server</b> - Resposible for storing data about users and measured environmental factors. <br>
-<b>Mobile application</b> - Resposible for authentication user, enabling defined area by the user, visualization measurements factors on charts and lists. <br>
+<li><b>Server</b> - Resposible for storing data about users and measured environmental factors. <br> </li>
+<li><b>Mobile application</b> - Resposible for authentication user, enabling defined area by the user, visualization measurements factors on charts and lists. <br> </li>
 
 ## Entity Relationship Diagram (ERD) <br>
 
