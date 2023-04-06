@@ -2,7 +2,11 @@
 
 ## About mobile and server application
 
-This mobile application enables the monitoring of a distributed system that measures environmental factors such as soil moisture, air temperature and insolation level. The application allows users to define their own areas and view the readings of the mentioned factors within the defined areas. The application is dedicated to the Android operating system and was developed using Java and XML, while the server application was created using PHP.
+This mobile application enables the monitoring of a distributed system that measures environmental factors such as soil moisture, air temperature and insolation level. The application allows users to define their own areas and view the readings of the mentioned factors within the defined areas. The application is dedicated to the Android operating system and was developed using Java and XML, while the server application was created using PHP. Server use hosting AwardSpace.
+
+## Mobile Application - Introduction
+
+https://user-images.githubusercontent.com/70532979/230366676-58ff6915-b08c-4c65-91a0-2c3fb638867a.mp4
 
 ## System Block Diagram - Description
 
