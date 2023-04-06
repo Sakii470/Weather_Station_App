@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/70532979/230366676-58ff6915-b08c-4c65-
 ![Structure project](https://user-images.githubusercontent.com/70532979/230367647-c0dfdf62-d9a4-4a77-b4fc-c404b4fd507b.png)>
 
 
-<b>Sensors</b> - Responsible for measuring environmental factors and sending them to a server. <br>
+<li><b>Sensors</b> - Responsible for measuring environmental factors and sending them to a server. <br> </li>
 <b>Server</b> - Resposible for storing data about users and measured environmental factors. <br>
 <b>Mobile application</b> - Resposible for authentication user, enabling defined area by the user, visualization measurements factors on charts and lists. <br>
 
